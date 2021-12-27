@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,200;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/records.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <script src="main.js" defer></script>
+    <!--Title of Folder-->
+    <title>Cadastro de Clientes - BOX3</title>
+</head>
+<body>
+    <header>
+        <!--Title of Page-->
+        <h1 class="header-title">Cadastro de Clientes - BOX3</h1>
+    </header>
+    <main>
+        <!--Pop-up Cadastrar clinte-->
+        <button type="button" class="button green mobile" id="cadastrarCliente">Cadastrar Cliente</button>
+        <table id='tableClient' class="records">
+            <thead>
+                <tr>
+                    <!--Costumer Informations-->
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>E-mail</th>
+                    <th>Data de Nascimento</th>
+                    <th>Ativo</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+            <!--Storage of Costumer Informations
+                <tr> 
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>E-mail</th>
+                    <th>Data de Nascimento</th>
+                    <th>Ativo</th>
+                    <th>Ação</th>
+                </tr>-->  
+            </tbody>
+        </table>
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h2>Novo Cliente</h2>
+                    <span class="modal-close" id="modalClose">&#10006;</span>
+                </header>
+                <!--Define the Informations-->
+                <form id= "form" class="modal-form">
+                    <input type="text" id="nome" data-index='new' class="modal-field" placeholder="Nome" required>
+                    <input type="tel" id="telefone" class="modal-field" placeholder="Telefone 99-999999999" required pattern='[0-9]{2}-[0-9]{9}'>
+                    <input type="email" id="email" class="modal-field" placeholder="E-mail" required>
+                    <input type="date" id="datanasc" class="modal-field" placeholder="Data de Nascimento" required>
+                    <label for="inlineCheckbox1">Cliente Ativo</label>
+                    <input type="checkbox" id="ativo" class="form-check-input" checked="checked">    
+                </form>
+                <!--Define the Costumer Buttons-->
+                <footer class="modal-footer">
+                    <button id='salvar' class="button green">Salvar</button>
+                    <button id='cancelar' class="button red">Cancelar</button>
+                </footer>
+            </div>
+        </div>
+    </main>
+    <footer>
+        By Mariana Teixeira de Castro
+    </footer>
+</body>
+</html>
